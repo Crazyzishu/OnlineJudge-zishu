@@ -1,0 +1,7 @@
+server:
+  port: 2025
+#spring
+spring:
+  application:
+    #应用名称
+    name: OJ-Job

@@ -9,13 +9,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>OJ-Modules</artifactId>
+    <artifactId>OJ-Common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>OJ-System</module>
-        <module>OJ-User</module>
-        <module>OJ-Job</module>
-        <module>OJ-Judge</module>
+        <module>OJ-Common-Core</module>
     </modules>
 
     <properties>
@@ -23,19 +20,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <!--web启动程序依赖-->
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.zishu</groupId>
-            <artifactId>OJ-Common-Core</artifactId>
-            <version>${OJ-Common-core.version}</version>
-        </dependency>
-    </dependencies>
-
 
 </project>

@@ -17,19 +17,27 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <packaging>pom</packaging>
     <modules>
         <module>OJ-Modules</module>
+        <module>OJ-Common</module>
     </modules>
+<!--    统一管理依赖版本-->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <spring-boot.version>3.0.1</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <OJ-Common-core.version>1.0-SNAPSHOT</OJ-Common-core.version>
     </properties>
     <dependencies>
         <!-- bootstrap 启动器 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -49,13 +57,18 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- SpringBoot 依赖配置 -->
+            <!-- SpringBoot 依赖配置 使用spring-boot-dependencies-3.0.1.pom进行统一管理-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

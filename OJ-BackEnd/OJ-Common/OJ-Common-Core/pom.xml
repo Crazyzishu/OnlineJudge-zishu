@@ -5,37 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.zishu</groupId>
-        <artifactId>OJ-BackEnd</artifactId>
+        <artifactId>OJ-Common</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>OJ-Modules</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>OJ-System</module>
-        <module>OJ-User</module>
-        <module>OJ-Job</module>
-        <module>OJ-Judge</module>
-    </modules>
+    <artifactId>OJ-Common-Core</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <!--web启动程序依赖-->
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.zishu</groupId>
-            <artifactId>OJ-Common-Core</artifactId>
-            <version>${OJ-Common-core.version}</version>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
         </dependency>
     </dependencies>
-
 
 </project>
